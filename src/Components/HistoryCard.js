@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import "./HistoryCard.css";
 
 export default function HistoryCard(props) {
   return (
@@ -10,10 +9,17 @@ export default function HistoryCard(props) {
       style={{
         background: props.mode.background,
         color: props.mode.color,
+        flexDirection: "row",
+        justifyContent: "center",
+        width: "400px",
+        flexWrap: "wrap",
+        padding: "10px",
       }}
     >
       {props.history.map((roll, index) => (
-        <p key={index}>{roll}, </p>
+        <p key={index} style={{ padding: "5px" }}>
+          {roll},{" "}
+        </p>
       ))}
     </Card>
   );
