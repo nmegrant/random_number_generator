@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
 import MyTitleBar from "./Components/MyTitleBar";
+import HistoryCard from "./Components/HistoryCard/HistoryCard";
 
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Card from "react-bootstrap/Card";
 
 import Switch from "react-switch";
 
@@ -54,20 +54,8 @@ function App() {
           />
           10
         </span>
-
         <h1>{roll}</h1>
-        <Card
-          border="info"
-          className="myCard"
-          style={{
-            background: mode.background,
-            color: mode.color,
-          }}
-        >
-          {rollHistory.map((roll, index) => (
-            <p key={index}>{roll}, </p>
-          ))}
-        </Card>
+        <HistoryCard mode={mode} history={rollHistory} />
       </Container>
     </div>
   );
