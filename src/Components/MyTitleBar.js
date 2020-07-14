@@ -8,11 +8,14 @@ export default function MyTitleBar(props) {
   return (
     <Jumbotron
       fluid
-      style={{ backgroundColor: "rgba(102, 16, 242, 0.2)", padding: "20px" }}
+      style={{
+        backgroundColor: "rgba(102, 16, 242, 0.2)",
+        padding: "20px",
+        dislay: "flex",
+      }}
     >
       <Container>
-        <h1>RNG</h1>
-        <p>Pick the dice you want to roll.</p>
+        <h1>RNG</h1>{" "}
         <span>
           light mode
           <Switch
@@ -25,6 +28,7 @@ export default function MyTitleBar(props) {
           />{" "}
           dark mode
         </span>
+        <p>Pick the dice you want to roll.</p>
       </Container>
     </Jumbotron>
   );

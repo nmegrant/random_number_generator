@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
 import MyTitleBar from "./Components/MyTitleBar";
+import HistoryCard from "./Components/HistoryCard";
 
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Card from "react-bootstrap/Card";
 
 import Switch from "react-switch";
 
@@ -38,10 +38,10 @@ function App() {
       }}
     >
       <MyTitleBar darkMode={darkMode} changeDarkMode={changeDarkMode} />
-      <Button variant="info" onClick={rollDice}>
+      <Button variant="info" onClick={rollDice} className="rollButton">
         Roll
       </Button>
-      <Container style={{ marginTop: "20px", justifyContent: "center" }}>
+      <Container className="myContainer">
         <span>
           100
           <Switch
@@ -54,23 +54,8 @@ function App() {
           />
           10
         </span>
-
         <h1>{roll}</h1>
-        <Card
-          border="info"
-          style={{
-            flexDirection: "row",
-            justifyContent: "center",
-            background: mode.background,
-            color: mode.color,
-            width: "200px",
-            flexWrap: "wrap",
-          }}
-        >
-          {rollHistory.map((roll, index) => (
-            <p key={index}>{roll}, </p>
-          ))}
-        </Card>
+        <HistoryCard mode={mode} history={rollHistory} />
       </Container>
     </div>
   );
