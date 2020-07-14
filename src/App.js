@@ -3,6 +3,8 @@ import "./App.css";
 import MyTitleBar from "./Components/MyTitleBar";
 import Button from "react-bootstrap/Button";
 
+// import Switch from "react-switch";
+
 function App() {
   const [roll, setRoll] = useState(0);
 
@@ -13,7 +15,9 @@ function App() {
   return (
     <div className="App">
       <MyTitleBar />
-      <Button onClick={rollDice}>Roll</Button>
+      <Button variant="info" onClick={rollDice}>
+        Roll
+      </Button>
       <h1>{roll}</h1>
     </div>
   );
