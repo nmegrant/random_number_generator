@@ -4,6 +4,7 @@ import MyTitleBar from "./Components/MyTitleBar";
 
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
+import Card from "react-bootstrap/Card";
 
 import Switch from "react-switch";
 
@@ -12,12 +13,11 @@ function App() {
   const [ten, setTen] = useState(false);
   const [rollHistory, setRollHistory] = useState([]);
 
-  console.log(rollHistory);
-
   const value = ten ? 10 : 100;
 
   function rollDice() {
     setRoll(Math.floor(Math.random() * value));
+    setRollHistory([...rollHistory, roll]);
   }
 
   return (
@@ -41,9 +41,11 @@ function App() {
         </span>
       </Container>
       <h1>{roll}</h1>
-      {rollHistory.map((roll) => (
-        <p>{roll}</p>
-      ))}
+      <Card style={{ flexDirection: "row", justifyContent: "center" }}>
+        {rollHistory.map((roll, index) => (
+          <p key={index}>{roll}, </p>
+        ))}
+      </Card>
     </div>
   );
 }
