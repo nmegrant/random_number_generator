@@ -2,7 +2,7 @@ import React from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 
-export default function MyTitleBar() {
+export default function MyTitleBar(props) {
   return (
     <Jumbotron
       fluid
