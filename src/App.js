@@ -41,7 +41,7 @@ function App() {
       <Button variant="info" onClick={rollDice}>
         Roll
       </Button>
-      <Container style={{ marginTop: "20px", justifyContent: "center" }}>
+      <Container className="myContainer">
         <span>
           100
           <Switch
@@ -58,13 +58,10 @@ function App() {
         <h1>{roll}</h1>
         <Card
           border="info"
+          className="myCard"
           style={{
-            flexDirection: "row",
-            justifyContent: "center",
             background: mode.background,
             color: mode.color,
-            width: "200px",
-            flexWrap: "wrap",
           }}
         >
           {rollHistory.map((roll, index) => (
