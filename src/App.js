@@ -7,17 +7,13 @@ import Switch from "react-switch";
 
 function App() {
   const [roll, setRoll] = useState(0);
-  // const [ten, setTen] = useState(false);
+  const [ten, setTen] = useState(false);
 
-  // const value = ten ? 10 : 100;
+  const value = ten ? 10 : 100;
 
   function rollDice() {
-    setRoll(Math.floor(Math.random() * 10));
+    setRoll(Math.floor(Math.random() * value));
   }
-
-  // function handleChange(checked) {
-  //   setTen(!checked);
-  // }
 
   return (
     <div className="App">
@@ -25,16 +21,16 @@ function App() {
       <Button variant="info" onClick={rollDice}>
         Roll
       </Button>
-      {/* <h1>100</h1>
+      <h1>100</h1>
       <Switch
-        checked={false}
-        onChange={handleChange}
+        checked={ten}
+        onChange={() => setTen(!ten)}
         checkedIcon={false}
         uncheckedIcon={false}
         onColor="#5bc0de"
         offColor="#5bc0de"
       />
-      <h1>10</h1> */}
+      <h1>10</h1>
       <h1>{roll}</h1>
     </div>
   );
