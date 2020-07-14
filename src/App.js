@@ -38,7 +38,7 @@ function App() {
       }}
     >
       <MyTitleBar darkMode={darkMode} changeDarkMode={changeDarkMode} />
-      <Button variant="info" onClick={rollDice}>
+      <Button variant="info" onClick={rollDice} className="rollButton">
         Roll
       </Button>
       <Container className="myContainer">
