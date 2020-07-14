@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./App.css";
 import MyTitleBar from "./Components/MyTitleBar";
 import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 
 import Switch from "react-switch";
 
@@ -19,9 +21,7 @@ function App() {
       <Button variant="info" onClick={rollDice}>
         Roll
       </Button>
-
       <h1>10</h1>
-
       <Switch
         checked={value}
         onChange={() => {
