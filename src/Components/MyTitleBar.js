@@ -24,7 +24,7 @@ export default function MyTitleBar(props) {
             checkedIcon={false}
             uncheckedIcon={false}
             onColor="#5bc0de"
-            offColor="#000000"
+            offColor="#222"
           />{" "}
           dark mode
         </span>
