@@ -24,7 +24,7 @@ function App() {
     : { background: "#FFF", color: "#222" };
 
   function rollDice() {
-    setRoll(Math.floor(Math.random() * value));
+    setRoll(Math.ceil(Math.random() * value));
     setRollHistory([...rollHistory, roll]);
   }
 
@@ -54,7 +54,7 @@ function App() {
           />
           10
         </span>
-        <h1>{roll}</h1>
+        <h1>{roll !== 0 ? roll : null}</h1>
         <HistoryCard mode={mode} history={rollHistory} />
       </Container>
     </div>
