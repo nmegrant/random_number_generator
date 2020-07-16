@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import MyTitleBar from "./Components/MyTitleBar";
+import MyTitleBar from "./Components/MyTitleBar/MyTitleBar";
 import HistoryCard from "./Components/HistoryCard";
 
 import Button from "react-bootstrap/Button";

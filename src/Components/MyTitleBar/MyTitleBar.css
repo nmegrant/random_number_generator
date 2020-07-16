@@ -1,0 +1,15 @@
+#jumbo {
+  padding: 20px;
+  display: flex;
+  transition: all 750ms ease-in 100ms;
+  background-color: rgba(102, 16, 242, 0.2);
+}
+
+.p {
+  margin: 20px;
+}
+
+#jumbo:hover {
+  background-color: #5bc0de;
+  color: rgba(102, 16, 242, 0.7);
+}
